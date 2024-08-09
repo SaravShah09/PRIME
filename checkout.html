@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+
+    <title>Checkout</title>
+    <style>
+         body {
+    font-family: 'Arial', sans-serif;
+}
+
+.header_menu {
+    background-color: #343a40; /* Darker navbar color */
+}
+
+.header_menu .navbar-brand img {
+    max-width: 120px;
+    height: auto;
+}
+
+.header_menu .nav-link {
+    color: #040404 !important; /* White text for navbar links */
+}
+
+.header_menu .nav-link:hover {
+    color: #cc4545 !important; /* Light color on hover */
+}
+
+
+.header_menu .search .btn {
+    border-radius: 50px; /* Rounded corners */
+    background-color: #825aef; /* Primary color */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove border */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    padding: 8px 20px; /* Padding inside the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.header_menu .search .btn:hover {
+    background-color: #0056b3; /* Darker primary color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+/* Footer section styling */
+.footer_section {
+    background-color: #39434e; /* Light background color for the footer */
+}
+
+.footer_section .footer_title h3 {
+    color: #92ff04; /* Dark color for section titles */
+}
+
+.footer_section .footer_links ul li a {
+    color: #0288f5; /* Slightly lighter color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer_section .footer_links ul li a:hover {
+    color: #dc00f9; /* Change color on hover */
+}
+
+.footer_section .copy {
+    color: #abb7ed; /* Default text color for footer */
+    font-size: medium;
+}
+.footer_section .info{
+    color: aliceblue;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <section class="header_menu" id="header_menu">
+        <div class="container-fluid px-0 shadow">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <a class="navbar-brand pl-5 pl-small-0" href="index.html">
+                    <img src="assets/images/logo.png" class="img img-fluid" width="120px" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="checkout py-5 my-5" id="checkout">
+        <div class="container">
+            <div class="section_title text-center mb-5">
+                <h1 class="text-capitalize">Checkout</h1>
+            </div>
+            <div class="row">
+                <!-- Order Summary -->
+                <div class="col-md-8">
+                    <div class="order-summary">
+                        <h4>Order Summary</h4>
+                        <div id="order-summary">
+                            <!-- Order summary will be injected here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Checkout Form -->
+                <div class="col-md-4">
+                    <div class="checkout-form">
+                        <h4>Billing Information</h4>
+                        <form id="checkout-form">
+                            <div class="form-group">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" class="form-control" id="full-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone No</label>
+                                <input type="text" class="form-control" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">Zip Code</label>
+                                <input type="text" class="form-control" id="zip" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <input type="text" class="form-control" id="state" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" class="form-control" id="country" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="payment-method">Payment Method</label>
+                                <select class="form-control" id="payment-method" required>
+                                    <option value="">Select Payment Method</option>
+                                    <option value="credit-card">Credit Card</option>
+                                    <option value="paypal">PayPal</option>
+                                    <option value="bank-transfer">Bank Transfer</option>
+                                    <option value="UPI">UPI</option>
+                                    <option value="cash-on-delivery">Cash on Delivery (COD)</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block" onclick="PlaceOrder()">Place Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- ==============footer starts here============== -->
+  <section class="footer_section pt-5 pb-2" id="footer_section">
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-6 pl-5 pl-small-15">
+                    <div class="footer_title">
+                        <a href="index.html"><img src="assets/images/logo.png" width="150px" class="img img-fluid"
+                                alt="logo"></a>
+                    </div>
+                    <div class="info">
+                        We offer high-quality products and excellent customer service. Our goal is to make shopping easy and enjoyable. Thank you for choosing us!
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>Quick Links</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="javascript:;">Offers & Discounts</a></li>
+                            <li><a href="javascript:;">Get Coupon</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>New Products</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="javascript:;">Woman Cloth</a></li>
+                            <li><a href="javascript:;">Fashion Accessories</a></li>
+                            <li><a href="javascript:;">Man Accessories</a></li>
+                            <li><a href="javascript:;">Rubber made Toys</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>Support</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="javascript:;">Frequently Asked Questions</a></li>
+                            <li><a href="javascript:;">Terms & Conditions</a></li>
+                            <li><a href="javascript:;">Privacy Policy</a></li>
+                            <li><a href="javascript:;">Report a Payment Issue</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy" border-top>
+            <h6 class="text-center mt-3">Copyright ©2024 All rights reserved
+            </h6>
+        </div>
+    </footer>
+</section>
+<div class="backtop">
+    <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+        <i class="fas fa-chevron-up text-dark"></i>
+    </a>
+</div>
+<!-- ==============footer ends here============== -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Function to get product details
+        function getProductDetails(productId) {
+            const productData = {
+                1: { id: 1, name: "Green Dress with Details", price: 350, image: "assets/images/product1.png" },
+                2: { id: 2, name: "Blue Denim Shirt", price: 400, image: "assets/images/product2.png" },
+                3: { id: 3, name: "Red T-Shirt", price: 250, image: "assets/images/product3.png" },
+                4: { id: 4, name: "Black Leather Jacket", price: 550, image: "assets/images/product4.png" },
+                5: { id: 5, name: "White Sneakers", price: 300, image: "assets/images/product5.png" },
+                6: { id: 6, name: "Classic Sunglasses", price: 150, image: "assets/images/product6.png" },
+                7: { id: 7, name: "Floral Maxi Dress", price: 400, image: "assets/images/product7.png" },
+                8: { id: 8, name: "Casual Joggers", price: 200, image: "assets/images/product8.png" },
+                9: { id: 9, name: "Sports Watch", price: 250, image: "assets/images/product9.png" },
+                10: { id: 10, name: "Leather Handbag", price: 450, image: "assets/images/product10.png" },
+                11: { id: 11, name: "Cotton Shirt", price: 280, image: "assets/images/product11.png" },
+                12: { id: 12, name: "Chinos Pants", price: 320, image: "assets/images/product12.png" },
+                13: { id: 13, name: "Denim Jacket", price: 350, image: "assets/images/product13.png" },
+                14: { id: 14, name: "Hoodie Sweatshirt", price: 300, image: "assets/images/product14.png" },
+                15: { id: 15, name: "Running Shoes", price: 280, image: "assets/images/product15.png" },
+                16: { id: 16, name: "Beaded Necklace", price: 180, image: "assets/images/product16.png" },
+                17: { id: 17, name: "Woolen Scarf", price: 120, image: "assets/images/product17.png" },
+                18: { id: 18, name: "Sporty Backpack", price: 250, image: "assets/images/product18.png" },
+                19: { id: 19, name: "Leather Belt", price: 130, image: "assets/images/product19.png" },
+                20: { id: 20, name: "Silk Tie", price: 90, image: "assets/images/product20.png" }
+            };
+            return productData[productId] || null;
+        }
+    
+        // Function to display the order summary
+        function displayOrderSummary() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const orderSummary = document.getElementById('order-summary');
+            let total = 0;
+    
+            orderSummary.innerHTML = ''; // Clear existing content
+    
+            if (cart.length === 0) {
+                orderSummary.innerHTML = '<p>No items in the cart.</p>';
+                return;
+            }
+    
+            cart.forEach(item => {
+                const product = getProductDetails(item.id);
+                if (product) {
+                    const itemTotal = product.price * item.quantity;
+                    total += itemTotal;
+    
+                    orderSummary.innerHTML += `
+                        <div class="order-item mb-3">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="${product.image}" class="img-fluid" alt="${product.name}">
+                                </div>
+                                <div class="col-md-9">
+                                    <h5>${product.name}</h5>
+                                    <p>Price: $${product.price.toFixed(2)}</p>
+                                    <p>Quantity: ${item.quantity}</p>
+                                    <p>Total: $${itemTotal.toFixed(2)}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+    
+            // Display total amount
+            orderSummary.innerHTML += `
+                <div class="order-total mt-4">
+                    <h5>Total Amount: $${total.toFixed(2)}</h5>
+                </div>
+            `;
+        }
+    
+        // Function to place the order
+        function PlaceOrder() {
+        const fullName = document.getElementById('full-name').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        const address = document.getElementById('address').value;
+        const city = document.getElementById('city').value;
+        const zip = document.getElementById('zip').value;
+        const state = document.getElementById('state').value;
+        const country = document.getElementById('country').value;
+        const paymentMethod = document.getElementById('payment-method').value;
+
+        if (!fullName || !phone || !email || !address || !city || !zip || !state || !country || !paymentMethod) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+ 
+        // Create order details object
+        const orderDetails = {
+            fullName,
+            phone,
+            email,
+            address,
+            city,
+            zip,
+            state,
+            country,
+            paymentMethod
+        };
+
+        // Save order details to sessionStorage
+        sessionStorage.setItem('orderDetails', JSON.stringify(orderDetails));
+
+        // Clear the cart
+        localStorage.removeItem('cart');
+
+        // Redirect to order confirmation page
+        window.location.href = 'order_confirmation.html';
+    }
+
+    // Function to update cart icon
+    function updateCartIcon() {
+        // ... (Your existing update cart icon function)
+    }
+
+    // Initialize the page
+    displayOrderSummary();
+    </script>
+</body>
+
+</html>

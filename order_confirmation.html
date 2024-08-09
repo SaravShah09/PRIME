@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Order Confirmation</title>
+
+    <style>
+         body {
+    font-family: 'Arial', sans-serif;
+}
+
+.header_menu {
+    background-color: #343a40; /* Darker navbar color */
+}
+
+.header_menu .navbar-brand img {
+    max-width: 120px;
+    height: auto;
+}
+
+.header_menu .nav-link {
+    color: #040404 !important; /* White text for navbar links */
+}
+
+.header_menu .nav-link:hover {
+    color: #cc4545 !important; /* Light color on hover */
+}
+
+
+.header_menu .search .btn {
+    border-radius: 50px; /* Rounded corners */
+    background-color: #825aef; /* Primary color */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove border */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    padding: 8px 20px; /* Padding inside the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.header_menu .search .btn:hover {
+    background-color: #0056b3; /* Darker primary color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+/* Footer section styling */
+.footer_section {
+    background-color: #39434e; /* Light background color for the footer */
+}
+
+.footer_section .footer_title h3 {
+    color: #92ff04; /* Dark color for section titles */
+}
+
+.footer_section .footer_links ul li a {
+    color: #0288f5; /* Slightly lighter color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer_section .footer_links ul li a:hover {
+    color: #dc00f9; /* Change color on hover */
+}
+
+.footer_section .copy {
+    color: #abb7ed; /* Default text color for footer */
+    font-size: medium;
+}
+.footer_section .info{
+    color: aliceblue;
+}
+
+    </style>
+</head>
+<body id="top">
+    <!-- Header Menu Section -->
+    <section class="header_menu" id="header_menu">
+        <div class="container-fluid px-0 shadow">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <a class="navbar-brand pl-5 pl-small-0" href="index.html">
+                    <img src="assets/images/logo.png" class="img img-fluid" width="120px" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Order Confirmation Section -->
+    <section class="order_confirmation py-5 my-5" id="order_confirmation">
+        <div class="container">
+            <div class="section_title text-center mb-5">
+                <h1 class="text-capitalize">Order Confirmation</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto order-confirmation">
+                    <div class="text-center">
+                        <img src="assets/images/oc.png" class="img img-fluid" alt="Success">
+                        <h2 class="mt-3">Thank you for your purchase!</h2>
+                        <h6>A confirmation email has been sent to <b id="email"></b>.</h6>
+                        <h6><span class="mr-2">Order No:</span><span id="order-number"><b></b></span></h6>
+                        <h6><span class="mr-2">Order Status:</span>
+                            <span id="order-status"><b><span class="badge badge-danger">Pending</span></b></span>
+                        </h6>
+                        <h6><span class="mr-2">Delivery Date:</span>
+                            <span id="delivery-date"><b></b></span>
+                        </h6>
+                    </div>
+                    <div class="order-details">
+                        <h5>Billing Information:</h5>
+                        <p><strong>Name:</strong> <span id="username"></span></p>
+                        <p><strong>Email:</strong> <span id="user-email"></span></p>
+                        <p><strong>Phone:</strong> <span id="user-phone"></span></p>
+                        <p><strong>Address:</strong> <span id="address"></span></p>
+                        <p><strong>City:</strong> <span id="city"></span></p>
+                        <p><strong>State:</strong> <span id="state"></span></p>
+                        <p><strong>ZIP Code:</strong> <span id="zip"></span></p>
+                        <p><strong>Country:</strong> <span id="country"></span></p>
+                        <p><strong>Payment Method:</strong> <span id="payment-method"></span></p>
+                    </div>
+                    <a href="index.html" class="btn btn-primary btn-lg mt-5">Return to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- ==============footer starts here============== -->
+ <section class="footer_section pt-5 pb-2" id="footer_section">
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-6 pl-5 pl-small-15">
+                    <div class="footer_title">
+                        <a href="index.html"><img src="assets/images/logo.png" width="150px" class="img img-fluid"
+                                alt="logo"></a>
+                    </div>
+                    <div class="info">
+                        We offer high-quality products and excellent customer service. Our goal is to make shopping easy and enjoyable. Thank you for choosing us!
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>Quick Links</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="javascript:;">Offers & Discounts</a></li>
+                            <li><a href="javascript:;">Get Coupon</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>New Products</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="javascript:;">Woman Cloth</a></li>
+                            <li><a href="javascript:;">Fashion Accessories</a></li>
+                            <li><a href="javascript:;">Man Accessories</a></li>
+                            <li><a href="javascript:;">Rubber made Toys</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>Support</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="javascript:;">Frequently Asked Questions</a></li>
+                            <li><a href="javascript:;">Terms & Conditions</a></li>
+                            <li><a href="javascript:;">Privacy Policy</a></li>
+                            <li><a href="javascript:;">Report a Payment Issue</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy" border-top>
+            <h6 class="text-center mt-3">Copyright ©2024 All rights reserved
+            </h6>
+        </div>
+    </footer>
+</section>
+<div class="backtop">
+    <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+        <i class="fas fa-chevron-up text-dark"></i>
+    </a>
+</div>
+<!-- ==============footer ends here============== -->
+
+    <!-- Back to Top Button -->
+    <div class="backtop">
+        <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+            <i class="fas fa-chevron-up text-dark"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+   
+
+    <!-- Script to Populate Order Details -->
+    <script>
+        function generateOrderNumber() {
+            return 'ORD' + Math.floor(Math.random() * 1000000); // Generates an order number like 'ORD123456'
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var orderDetailsString = sessionStorage.getItem('orderDetails');
+            
+            if (orderDetailsString) {
+                try {
+                    var orderDetails = JSON.parse(orderDetailsString);
+
+                    // Populate user information
+                    document.getElementById('username').textContent = orderDetails.fullName || 'N/A';
+                    document.getElementById('email').textContent = orderDetails.email || 'N/A';
+                    document.getElementById('user-phone').textContent = orderDetails.phone || 'N/A';
+                    document.getElementById('address').textContent = orderDetails.address || 'N/A';
+                    document.getElementById('city').textContent = orderDetails.city || 'N/A';
+                    document.getElementById('state').textContent = orderDetails.state || 'N/A';
+                    document.getElementById('zip').textContent = orderDetails.zip || 'N/A';
+                    document.getElementById('country').textContent = orderDetails.country || 'N/A';
+                    document.getElementById('payment-method').textContent = orderDetails.paymentMethod || 'N/A';
+                    
+                    // Generate and populate order number
+                    var orderNumber = generateOrderNumber();
+                    document.getElementById('order-number').textContent = orderNumber;
+
+                    // Calculate and populate delivery date
+                    var today = new Date();
+                    today.setDate(today.getDate() + 5);
+                    var deliveryDate = today.toISOString().split('T')[0]; // Format YYYY-MM-DD
+                    document.getElementById('delivery-date').textContent = deliveryDate || 'N/A';
+
+                    // Populate order status
+                    document.getElementById('order-status').innerHTML = `<span class="badge badge-${orderDetails.status === 'Pending' ? 'danger' : 'success'}">${orderDetails.status || 'Pending'}</span>`;
+                } catch (error) {
+                    console.error("Error parsing order details from sessionStorage:", error);
+                }
+            } else {
+                document.querySelector('.order-confirmation').innerHTML += '<p>No order details available.</p>';
+            }
+
+            // Optionally clear sessionStorage after displaying the order details
+            sessionStorage.removeItem('orderDetails');
+        });
+    </script>
+    
+    
+</body>
+</html>
+

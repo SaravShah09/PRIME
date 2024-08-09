@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>E-Commerce</title>
+
+    <style>
+         body {
+    font-family: 'Arial', sans-serif;
+}
+
+.header_menu {
+    background-color: #343a40; /* Darker navbar color */
+}
+
+.header_menu .navbar-brand img {
+    max-width: 120px;
+    height: auto;
+}
+
+.header_menu .nav-link {
+    color: #040404 !important; /* White text for navbar links */
+}
+
+.header_menu .nav-link:hover {
+    color: #cc4545!important; /* Light color on hover */
+}
+
+
+.header_menu .search .btn {
+    border-radius: 50px; /* Rounded corners */
+    background-color: #825aef; /* Primary color */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove border */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    padding: 8px 20px; /* Padding inside the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.header_menu .search .btn:hover {
+    background-color: #0056b3; /* Darker primary color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+        .testimonial img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .testimonial p {
+            font-size: 1.1rem;
+        }
+        /* Footer section styling */
+.footer_section {
+    background-color: #39434e; /* Light background color for the footer */
+}
+
+.footer_section .footer_title h3 {
+    color: #92ff04; /* Dark color for section titles */
+}
+
+.footer_section .footer_links ul li a {
+    color: #0288f5; /* Slightly lighter color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer_section .footer_links ul li a:hover {
+    color: #dc00f9; /* Change color on hover */
+}
+
+.footer_section .copy {
+    color: #abb7ed; /* Default text color for footer */
+    font-size: medium;
+}
+.footer_section .info{
+    color: aliceblue;
+}
+
+</style>
+</head>
+
+<body id="top">
+    <!-- ==============header menu section starts here============== -->
+    <section class="header_menu" id="header_menu">
+        <div class="container-fluid px-0 shadow">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 ">
+                <a class="navbar-brand pl-5 pl-small-0" href="index.html">
+                    <img src="assets/images/logo.png" class="img img-fluid" width="120px" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        
+                    </ul>
+                    <div class="search mr-3">
+                        <a href="search.html" class="btn btn-sm btn-outline-primary">
+                            Search
+                        </a>
+                    </div>
+                   <!-- Cart Icon in the header -->
+<div class="cart">
+    <a href="cart.html">
+        <i class="fas fa-shopping-cart fa-2x"></i>
+        <span class="badge badge-pill badge-primary" id="cart-count">0</span>
+    </a>
+</div>
+
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- ==============header menu section ends here============== -->
+
+    <!-- ==============about starts here============== -->
+    <section class="about py-5 my-5" id="about">
+        <div class="container ">
+            <div class="section_title text-center mb-5">
+                <h1 class="text-capitalize">About Us</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="assets/images/aboutus1.png" class="img img-fluid rounded shadow-lg" alt="about us image">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="title">
+                                <h3>Our Mission</h3>
+                            </div>
+                            <div class="about_text mt-sm-5">
+                                <p>
+                                    Our mission is to offer a wide range of high-quality products that enhance our customers' lives. We believe in providing items that reflect individual styles and bring joy and convenience to everyday living. From fashion to accessories, we aim to be a trusted source for all our customers' needs.
+                                </p>
+                                <p>
+                                    We are dedicated to delivering exceptional customer service, ensuring every shopping experience is enjoyable and satisfying. Our team works diligently to understand and meet our customers' needs, always striving to exceed expectations.
+                                </p>
+                                <p>
+                                    We are committed to sustainability and ethical practices, integrating environmentally friendly methods and supporting fair trade. Our goal is not only to offer great products but also to make a positive impact on the world, contributing to a better future for all.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- ==============testimonial starts here============== -->
+                <section class="text-center bg-info my-5 py-5 rounded">
+                    <div class="col-md-10 col-10 mx-auto">
+                        <!-- Carousel Wrapper -->
+                        <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+                            <!--Slides-->
+                            <div class="carousel-inner">
+                                <!--First slide-->
+                                <div class="carousel-item active">
+                                    <div class="testimonial">
+                                        <!--Avatar-->
+                                        <div class="avatar mx-auto mb-4">
+                                            <img src="assets/images/t1.png" class="rounded-circle img-fluid" alt="First sample avatar image">
+                                        </div>
+                                        <!--Content-->
+                                        <p>
+                                            <i class="fas fa-quote-left"></i> I had a fantastic experience shopping here. 
+                                            The product quality and customer service were outstanding,
+                                             making the entire process smooth and enjoyable.
+
+                                            The team's attention to detail and dedication to customer satisfaction truly stand out. 
+                                            The website was easy to navigate, and any questions I had were promptly addressed.
+                                            
+                                            I highly recommend this store for its excellent products and service. 
+                                            It's clear they value their customers and go the extra mile to ensure a great shopping experience.
+                                        </p>
+                                        <h4 class="font-weight-bold">Anna Deynah</h4>
+                                        <h6 class="font-weight-bold my-3">Founder at ET Company</h6>
+                                        <!--Review-->
+                                        <i class="fas fa-star blue-text"> </i>
+                                        <i class="fas fa-star blue-text"> </i>
+                                        <i class="fas fa-star blue-text"> </i>
+                                        <i class="fas fa-star blue-text"> </i>
+                                        <i class="fas fa-star-half-alt blue-text"> </i>
+                                    </div>
+                                </div>
+                                <!--First slide-->
+                                <!--Second slide-->
+                                <div class="carousel-item">
+                                    <div class="testimonial">
+                                        <!--Avatar-->
+                                        <div class="avatar mx-auto mb-4">
+                                            <img src="assets/images/t2.png" class="rounded-circle img-fluid" alt="Second sample avatar image">
+                                        </div>
+                                        <!--Content-->
+                                        <p>
+                                            <i class="fas fa-quote-left"></i> My shopping experience with this store was outstanding. 
+                                            The product selection is diverse, and the quality is consistently high, 
+                                            making each purchase a pleasure.
+
+                                            The customer service was exceptional, with a team that was both responsive and helpful. 
+                                            They made sure all my queries were addressed promptly, adding a personal touch to the experience.
+                                            
+                                            I wholeheartedly recommend this store to anyone seeking great products and outstanding service.
+                                            It's clear they prioritize their customers and strive for excellence. </p>
+                                        <h4 class="font-weight-bold">Maria Kate</h4>
+                                        <h6 class="font-weight-bold my-3">Photographer at Studio LA</h6>
+                                        <!--Review-->
+                                        <i class="fas fa-star blue-text"> </i>
+                                        <i class="fas fa-star blue-text"> </i>
+                                        <i class="fas fa-star blue-text"> </i>
+                                        <i class="fas fa-star blue-text"> </i>
+                                        <i class="fas fa-star blue-text"> </i>
+                                    </div>
+                                </div>
+                                <!--Second slide-->
+                                <!--Third slide-->
+                                <div class="carousel-item">
+                                    <div class="testimonial">
+                                        <!--Avatar-->
+                                        <div class="avatar mx-auto mb-4">
+                                            <img src="assets/images/t3.png" class="rounded-circle img-fluid" alt="Third sample avatar image">
+                                        </div>
+                                        <!--Content-->
+                                        <p>
+                                            <i class="fas fa-quote-left"></i>This store consistently exceeds my expectations.
+                                            The variety of products is impressive, and the quality is top-notch, 
+                                            which keeps me coming back for more.
+
+                                            The customer support team is friendly and efficient, 
+                                            always going the extra mile to ensure a smooth shopping experience. 
+                                            Their attention to detail and commitment to service truly stand out.
+                                            
+                                            I’m always satisfied with my purchases and the overall shopping experience. 
+                                            I highly recommend this store for anyone looking for quality products and exceptional service.</p>
+                                        <h4 class="font-weight-bold">John Doe</h4>
+                                        <h6 class="font-weight-bold my-3">Front-end Developer in NY</h6>
+                                        <!--Review-->
+                                        <i class="fas fa-star blue-text"> </i>
+                                        <i class="fas fa-star blue-text"> </i>
+                                        <i class="fas fa-star blue-text"> </i>
+                                        <i class="fas fa-star blue-text"> </i>
+                                        <i class="fas fa-star-half-alt blue-text"> </i>
+                                    </div>
+                                </div>
+                                <!--Third slide-->
+                            </div>
+                            <!--Controls-->
+                            <a class="carousel-control-prev" href="#carousel-example-1" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel-example-1" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <!-- Carousel Wrapper -->
+                    </div>
+                </section>
+                <!-- ==============testimonial ends here============== -->
+            </div>
+        </div>
+    </section>
+    <!-- ==============about ends here============== -->
+
+    <!-- ==============footer starts here============== -->
+    <section class="footer_section pt-5 pb-2" id="footer_section">
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 col-6 pl-5 pl-small-15">
+                        <div class="footer_title">
+                            <a href="index.html"><img src="assets/images/logo.png" width="150px" class="img img-fluid"
+                                    alt="logo"></a>
+                        </div>
+                        <div class="info">
+                            We offer high-quality products and excellent customer service. Our goal is to make shopping easy and enjoyable. Thank you for choosing us!
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="footer_title pt-3 mb-3">
+                            <h3>Quick Links</h3>
+                        </div>
+                        <div class="footer_links">
+                            <ul>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="javascript:;">Offers & Discounts</a></li>
+                                <li><a href="javascript:;">Get Coupon</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="footer_title pt-3 mb-3">
+                            <h3>New Products</h3>
+                        </div>
+                        <div class="footer_links">
+                            <ul>
+                                <li><a href="javascript:;">Woman Cloth</a></li>
+                                <li><a href="javascript:;">Fashion Accessories</a></li>
+                                <li><a href="javascript:;">Man Accessories</a></li>
+                                <li><a href="javascript:;">Rubber made Toys</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="footer_title pt-3 mb-3">
+                            <h3>Support</h3>
+                        </div>
+                        <div class="footer_links">
+                            <ul>
+                                <li><a href="javascript:;">Frequently Asked Questions</a></li>
+                                <li><a href="javascript:;">Terms & Conditions</a></li>
+                                <li><a href="javascript:;">Privacy Policy</a></li>
+                                <li><a href="javascript:;">Report a Payment Issue</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy" border-top>
+                <h6 class="text-center mt-3">Copyright ©2024 All rights reserved
+                </h6>
+            </div>
+        </footer>
+    </section>
+    <div class="backtop">
+        <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+            <i class="fas fa-chevron-up text-dark"></i>
+        </a>
+    </div>
+    <!-- ==============footer ends here============== -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Function to update cart count
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+    document.getElementById('cart-count').textContent = cartCount;
+}
+
+// Update cart count on page load
+document.addEventListener('DOMContentLoaded', updateCartCount);
+
+</script>
+</body>
+
+</html>

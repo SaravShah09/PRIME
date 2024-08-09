@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Product Details</title>
+    <style>
+         body {
+    font-family: 'Arial', sans-serif;
+}
+
+.header_menu {
+    background-color: #343a40; /* Darker navbar color */
+}
+
+.header_menu .navbar-brand img {
+    max-width: 120px;
+    height: auto;
+}
+
+.header_menu .nav-link {
+    color: #040404 !important; /* White text for navbar links */
+}
+
+.header_menu .nav-link:hover {
+    color: #cc4545 !important; /* Light color on hover */
+}
+
+
+.header_menu .search .btn {
+    border-radius: 50px; /* Rounded corners */
+    background-color: #825aef; /* Primary color */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove border */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    padding: 8px 20px; /* Padding inside the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.header_menu .search .btn:hover {
+    background-color: #0056b3; /* Darker primary color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+ 
+
+        .header_menu .cart {
+            position: relative;
+            background-color: rgb(219, 237, 240);
+            height: 40px;
+            width: 40px;
+            
+        }
+
+        .header_menu .cart .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+
+        .product-detail {
+            margin-top: 50px;
+        }
+        .product-detail h1,
+        .product-detail p {
+            color: #040404; /* Change this to the desired text color */
+            font-style: italic;
+        }
+        .product-detail .carousel-inner img {
+            width: 100%;
+            height: 500px;
+        }
+
+        .related-products h3 {
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .related-products .card {
+            margin-bottom: 10px;
+            height: 100%;
+        }
+
+        .related-products .card-img-top {
+            height: 200px;
+            object-fit: contain;
+        }
+
+/* Footer section styling */
+.footer_section {
+    background-color: #39434e; /* Light background color for the footer */
+}
+
+.footer_section .footer_title h3 {
+    color: #92ff04; /* Dark color for section titles */
+}
+
+.footer_section .footer_links ul li a {
+    color: #0288f5; /* Slightly lighter color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer_section .footer_links ul li a:hover {
+    color: #dc00f9; /* Change color on hover */
+}
+
+.footer_section .copy {
+    color: #abb7ed; /* Default text color for footer */
+    font-size: medium;
+}
+.footer_section .info{
+    color: aliceblue;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- ==============header menu section starts here============== -->
+    <section class="header_menu" id="header_menu">
+        <div class="container-fluid px-0 shadow">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <a class="navbar-brand pl-5 pl-small-0" href="index.html">
+                    <img src="assets/images/logo.png" class="img img-fluid" width="120px" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        
+                    </ul>
+                    <div class="search mr-3">
+                        <a href="search.html" class="btn btn-sm btn-outline-primary">
+                            Search
+                        </a>
+                    </div>
+                    <!-- Cart Icon in the header -->
+                    <div class="cart">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart fa-2x"></i>
+                            <span class="badge badge-pill badge-primary" id="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- ==============header menu section ends here============== -->
+
+    <!-- ==============product detail starts here============== -->
+    <section class="product-detail py-5 my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Product Image Slider -->
+                    <div id="product-slider" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Images will be dynamically injected here -->
+                        </div>
+                        <a class="carousel-control-prev" href="#product-slider" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#product-slider" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Product Details -->
+                    <div id="product-details">
+                        <!-- Product details will be dynamically injected here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products">
+                <h3>Related Products</h3>
+                <div class="row" id="related-products-list">
+                    <!-- Related products will be dynamically injected here -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==============product detail ends here============== -->
+
+ <!-- ==============footer starts here============== -->
+ <section class="footer_section pt-5 pb-2" id="footer_section">
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-6 pl-5 pl-small-15">
+                    <div class="footer_title">
+                        <a href="index.html"><img src="assets/images/logo.png" width="150px" class="img img-fluid"
+                                alt="logo"></a>
+                    </div>
+                    <div class="info">
+                        We offer high-quality products and excellent customer service. Our goal is to make shopping easy and enjoyable. Thank you for choosing us!
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>Quick Links</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="javascript:;">Offers & Discounts</a></li>
+                            <li><a href="javascript:;">Get Coupon</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>New Products</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="javascript:;">Woman Cloth</a></li>
+                            <li><a href="javascript:;">Fashion Accessories</a></li>
+                            <li><a href="javascript:;">Man Accessories</a></li>
+                            <li><a href="javascript:;">Rubber made Toys</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>Support</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="javascript:;">Frequently Asked Questions</a></li>
+                            <li><a href="javascript:;">Terms & Conditions</a></li>
+                            <li><a href="javascript:;">Privacy Policy</a></li>
+                            <li><a href="javascript:;">Report a Payment Issue</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy" border-top>
+            <h6 class="text-center mt-3">Copyright ©2024 All rights reserved
+            </h6>
+        </div>
+    </footer>
+</section>
+<div class="backtop">
+    <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+        <i class="fas fa-chevron-up text-dark"></i>
+    </a>
+</div>
+<!-- ==============footer ends here============== -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function loadProductDetails() {
+                // Example product data
+                const productData = {
+    1: {
+        name: "Men Casual Hoodie",
+        price: "₹400",
+        description: "BOLDFIT Hoodies for Men Stylish Sweatshirt for Men Black Hoodie for Men Cotton Hoodies for Men Branded Men Hoodies for Running, Gym Warm Travel Hoodies for Men Pullover Hoodies for Boys.",
+        category: "Category 1",
+        images: ["assets/images/product1.png", "assets/images/pd1_1.png", "assets/images/pd1_2.png"],
+        relatedProducts: [
+            { id: 3, name: "Office Wear Shirt for Men", image: "assets/images/product3.png" },
+            { id: 11, name: "Jacket for Men", image: "assets/images/product11.png" },
+            { id: 16, name: "Casual Jeans for Men", image: "assets/images/product16.png" }
+        ]
+    },
+    2: {
+        name: "Party Dress for Women",
+        price: "₹550",
+        description: "Sheetal Associates Women's puff Sleeve V-Neck Bodycon Casual Mini dress",
+        category: "Category 2",
+        images: ["assets/images/product2.png", "assets/images/pd2_1.png", "assets/images/pd2_2.png"],
+        relatedProducts: [
+            { id: 7, name: "Cotton Plazzo for Women", image: "assets/images/product7.png" },
+            { id: 12, name: "Top for Women", image: "assets/images/product12.png" },
+            { id: 17, name: "PartyWear Dress for Women", image: "assets/images/product17.png" }
+        ]
+    },
+
+    3: {
+        name: "Office Wear Shirt for Men",
+        price: "₹800",
+        description: "CB-COLEBROOK Men's Regular Fit Solid Soft Touch Cotton Casual Shirt with Pocket Design with Spread Collar & Full Sleeves",
+        category: "Category 1",
+        images: ["assets/images/product3.png", "assets/images/pd3_1.png", "assets/images/pd3_2.png"],
+        relatedProducts: [
+            { id: 1, name: "Men Casual Hoodie", image: "assets/images/product1.png" },
+            { id: 11, name: "Jacket for Men", image: "assets/images/product11.png" },
+            { id: 16, name: "Casual Jeans for Men", image: "assets/images/product16.png" }
+        ]
+    },
+
+    4: {
+        name: "Stylish Goggles for Men",
+        price: "₹200",
+        description: "KAEN Eyewearlabs | Polarized Full Rim Rectangular Branded Stylish Sunglasses For Men & Women | 100% UV Protection Shades | Cricket Sports Cycling Driving | Medium | Black Lens | KAENHyperKraftC6EL",
+        category: "Category 3",
+        images: ["assets/images/product4.png", "assets/images/pd4_1.png", "assets/images/pd4_2.png"],
+        relatedProducts: [
+            { id: 8, name: "Stylish Locket for Men", image: "assets/images/product8.png" },
+            { id: 13, name: "Stylish bracelet for Men", image: "assets/images/product13.png" },
+            { id: 18, name: "Shoes for Men", image: "assets/images/product18.png" }
+        ]
+    },
+    /* ------------------------------------Women wear ------------------------------*/
+    
+
+    5: {
+        name: "Sony Camera",
+        price: "₹200000",
+        description: "Sony Alpha Ilce-7C Compact Full Frame 64 GB Camera | 4K with Flip Screen, Light Weight | Real Time Tracking |Content Creation - Silver",
+        category: "Category 4",
+        images: ["assets/images/product5.png", "assets/images/pd5_1.png", "assets/images/pd5_2.png"],
+        relatedProducts: [
+            { id: 10, name: "laptop Sleeve", image: "assets/images/product10.png" },
+            { id: 15, name: "C-type Cable", image: "assets/images/product15.png" },
+            { id: 20, name: "Boat Sound Bar", image: "assets/images/product20.png" }
+        ]
+    },
+    6: {
+        name: "MakeUp for Women",
+        price: "₹1400",
+        description: "HUDA GIRL Beauty Rose Gold Remastered + Nude Edition Eyeshadow Palette Combo Kit - 36 Matte and Shimmer Finishes, Includes Black Eyeshadow - Complete Eye Shadow Palette Set",
+        category: "Category 5",
+        images: ["assets/images/product6.png", "assets/images/pd6_1.png", "assets/images/pd6_2.png"],
+        relatedProducts: [
+            { id: 9, name: "Stylish Hair Buckle for Women", image: "assets/images/product9.png" },
+            { id: 14, name: "Necklace Set for Women", image: "assets/images/product14.png" },
+            { id: 19, name: "Chappal for Women", image: "assets/images/product19.png" }
+        ]
+    },
+
+    7: {
+        name: "Cotton Plazzo for Women",
+        price: "₹400",
+        description: "RINZA Solid Cotton Palazzo Relaxed Pants for Women and Girl's",
+        category: "Category 2",
+        images: ["assets/images/product7.png", "assets/images/pd7_1.png", "assets/images/pd7_2.png"],
+        relatedProducts: [
+            { id: 2, name: "Party Dress for Women", image: "assets/images/product2.png" },
+            { id: 12, name: "Top for Women", image: "assets/images/product12.png" },
+            { id: 17, name: "PartyWear Dress for Women", image: "assets/images/product17.png" }
+        ]
+    },
+
+    8: {
+        name: "Stylish Locket for Men",
+        price: "₹550",
+        description: "SALTY Alpha Midnight Charisma Neck Chain for Men & Boys | Stainless Steel | Long Necklace | Pendant | Locket | Fancy & Stylish | Birthday Gift | Aesthetic Jewellery | Accessories for Everyday Wear",
+        category: "Category 3",
+        images: ["assets/images/product8.png", "assets/images/pd8_1.png", "assets/images/pd8_2.png"],
+        relatedProducts: [
+            { id: 4, name: "Stylish Goggles for Men", image: "assets/images/product4.png" },
+            { id: 13, name: "Stylish bracelet for Men", image: "assets/images/product13.png" },
+            { id: 18, name: "Shoes for Men", image: "assets/images/product18.png" }
+        ]
+    },
+
+    9: {
+        name: "Stylish Hair Buckle for Women",
+        price: "₹99",
+        description: "LYKAA Hair Rhinestone Clips, Stylish Peacock Flower Hair Clips, Rose Gold Hair Barrette, Back Pin, Hair Buckle, Ponytail Clips, Hair Pins for Wedding Designer Women and Girls - (Multicolor, Pack of 1)",
+        category: "Category 5",
+        images: ["assets/images/product9.png", "assets/images/pd9_1.png", "assets/images/pd9_2.png"],
+        relatedProducts: [
+            { id: 6, name: "MakeUp for Women", image: "assets/images/product6.png" },
+            { id: 14, name: "Necklace Set for Women", image: "assets/images/product14.png" },
+            { id: 19, name: "Chappal for Women", image: "assets/images/product19.png" }
+        ]
+    },
+
+    10: {
+        name: "laptop Sleeve",
+        price: "₹300",
+        description: "Dyazo Water Resistant Laptop Sleeve with Handle Compatible for 15 Inch to 15.6 Inches laptops & Notebooks - Grey",
+        category: "Category 3",
+        images: ["assets/images/product10.png", "assets/images/pd10_1.png", "assets/images/pd10_2.png"],
+        relatedProducts: [
+            { id: 5, name: "Sony Camera", image: "assets/images/product5.png" },
+            { id: 15, name: "C-type Cable", image: "assets/images/product10.png" },
+            { id: 20, name: "Boat Sound Bar", image: "assets/images/product15.png" }
+        ]
+    },
+
+    11: {
+        name: "Jacket for Men",
+        price: "₹2000",
+        description: "Boldfit Winter Jacket for Men Quilted Hooded Winter Jackets for Men & Boys Full Sleeve Mens Jacket Monsoon Jackets for Men Jacket for Men Wear Bomber Jacket for Men Jerkin for Men Padded Jacket",
+        category: "Category 1",
+        images: ["assets/images/product11.png", "assets/images/pd1_11.png", "assets/images/pd11_2.png"],
+        relatedProducts: [
+            { id: 1, name: "Men Casual Hoodie", image: "assets/images/product1.png" },
+            { id: 3, name: "Office Wear Shirt for Men", image: "assets/images/product3.png" },
+            { id: 16, name: "Casual Jeans for Men", image: "assets/images/product16.png" }
+        ]
+    },
+    12: {
+        name: "Top for Women",
+        price: "₹499",
+        description: "U.S. POLO ASSN. Women's Regular Fit Tops",
+        category: "Category 2",
+        images: ["assets/images/product12.png", "assets/images/pd12_1.png", "assets/images/pd12_2.png"],
+        relatedProducts: [
+            { id: 2, name: "Party Dress for Women", image: "assets/images/product2.png" },
+            { id: 7, name: "Cotton Plazzo for Women", image: "assets/images/product7.png" },
+            { id: 17, name: "PartyWear Dress for Women", image: "assets/images/product17.png" }
+        ]
+    },
+
+    13: {
+        name: "Stylish bracelet for Men",
+        price: "₹500",
+        description: "Anti-Static Cordless Wrist Strap | Automatic Electrostatic Removal Bracelet Human Body in Winter | Not Easy Fall Off Adjustable Antistatic Static Silicone Wristband for Men and Women",
+        category: "Category 4",
+        images: ["assets/images/product13.png", "assets/images/pd13_1.png", "assets/images/pd13_2.png"],
+        relatedProducts: [
+            { id: 4, name: "Stylish Goggles for Men", image: "assets/images/product4.png" },
+            { id: 8, name: "Stylish Locket for Men", image: "assets/images/product8.png" },
+            { id: 18, name: "Shoes for Men", image: "assets/images/product18.png" }
+        ]
+    },
+
+    14: {
+        name: "Necklace Set for Women",
+        price: "₹999",
+        description: "Salty Fashion Clover Affair Jewellery Set for Women & Girls | Van Clef | Neck Chain | Necklace | Bracelet | Earrings | Hand Band | Birthday Gift | Aesthetic Jewelry | Accessories for Everyday Wear",
+        category: "Category 1",
+        images: ["assets/images/product14.png", "assets/images/pd14_1.png", "assets/images/pd14_2.png"],
+        relatedProducts: [
+            { id: 6, name: "MakeUp for Women", image: "assets/images/product6.png" },
+            { id: 9, name: "Stylish Hair Buckle for Women", image: "assets/images/product9.png" },
+            { id: 19, name: "Chappal for Women", image: "assets/images/product19.png" }
+        ]
+    },
+    
+
+    15: {
+        name: "C-type Cable",
+        price: "₹149",
+        description: "Ambrane Unbreakable 3A Fast Charging 1.5m Braided Type C Cable for Smartphones, Tablets & other Type C devices, 480Mbps Data Sync, Quick Charge 3.0 (RCT15A, Black)",
+        category: "Category 3",
+        images: ["assets/images/product15.png", "assets/images/pd15_1.png", "assets/images/pd15_2.png"],
+        relatedProducts: [
+            { id: 5, name: "Sony Camera", image: "assets/images/product5.png" },
+            { id: 10, name: "laptop Sleeve", image: "assets/images/product10.png" },
+            { id: 20, name: "Boat Sound Bar", image: "assets/images/product15.png" }
+        ]
+    },
+    16: {
+        name: "Casual Jeans for Men",
+        price: "₹3500",
+        description: "TURMS Adventure Comfort Denim Jeans for Men Stretchable Jeans Pant Cotton Rich Jeans 30 Days No Wash Casual Jeans Anti Odor| Anti Stain | Breathable | Midrise (Availbale in Plus Sizes)",
+        category: "Category 1",
+        images: ["assets/images/product16.png", "assets/images/pd16_1.png", "assets/images/pd16_2.png"],
+        relatedProducts: [
+            { id: 1, name: "Men Casual Hoodie", image: "assets/images/product1.png" },
+            { id: 3, name: "Office Wear Shirt for Men", image: "assets/images/product3.png" },
+            { id: 11, name: "Jacket for Men", image: "assets/images/product11.png" }
+        ]
+    },
+
+    17: {
+        name: "PartyWear Dress for Women",
+        price: "₹2000",
+        description: "DEEBACO Smocked Midi Dress with Shrug for Women's|Tie-up Neck 3/4 Bell Sleeves Straps Shoulder Fit & Flare Western Party Causal Wear Ladies Dresses|Summer Wear Shrug Dress Set",
+        category: "Category 2",
+        images: ["assets/images/product17.png", "assets/images/pd17_1.png", "assets/images/pd17_2.png"],
+        relatedProducts: [
+            { id: 2, name: "Party Dress for Women", image: "assets/images/product2.png" },
+            { id: 7, name: "Cotton Plazzo for Women", image: "assets/images/product7.png" },
+            { id: 12, name: "Top for Women", image: "assets/images/product12.png" }
+        ]
+    },
+
+    18: {
+        name: "Shoes for Men",
+        price: "₹4000",
+        description: "HEALTH FIT Orthopedic & Diabetic Shoes Breathable Soft Sole Ultra-Lightweight Shoes for Men's 1252 OLI UK 8 Olive",
+        category: "Category 4",
+        images: ["assets/images/product18.png", "assets/images/pd18_1.png", "assets/images/pd18_2.png"],
+        relatedProducts: [
+            { id: 4, name: "Stylish Goggles for Men", image: "assets/images/product4.png" },
+            { id: 8, name: "Stylish Locket for Men", image: "assets/images/product8.png" },
+            { id: 13, name: "Stylish bracelet for Men", image: "assets/images/product13.png" }
+        ]
+    },
+
+    19: {
+        name: "Slippers for Women",
+        price: "₹200",
+        description: "ORTHO JOY Extra-Soft Comfortable Fancy Slippers Flip Flop for women",
+        category: "Category 5",
+        images: ["assets/images/product19.png", "assets/images/pd19_1.png", "assets/images/pd19_2.png"],
+        relatedProducts: [
+            { id: 6, name: "MakeUp for Women", image: "assets/images/product6.png" },
+            { id: 9, name: "Stylish Hair Buckle for Women", image: "assets/images/product9.png" },
+            { id: 14, name: "Necklace Set for Women", image: "assets/images/product14.png" }
+        ]
+    },
+
+    20: {
+        name: "Boat Sound Bar",
+        price: "₹7000",
+        description: "boAt Aavante Bar 610 Bluetooth Soundbar with 25W RMS Signature Sound, 2.0 Channel with Dual Passive Radiators, Upto 7 Hours Playback & Multi Connectivity(Charcoal Black)",
+        category: "Category 3",
+        images: ["assets/images/product20.png", "assets/images/pd20_1.png", "assets/images/pd20_2.png"],
+        relatedProducts: [
+            { id: 5, name: "Sony Camera", image: "assets/images/product5.png" },
+            { id: 10, name: "laptop Sleeve", image: "assets/images/product10.png" },
+            { id: 15, name: "C-type Cable", image: "assets/images/product15.png" }
+        ]
+    },
+
+
+};
+const queryParams = new URLSearchParams(window.location.search);
+            const productId = queryParams.get('id') || 1; 
+
+            const product = productData[productId];
+
+            if (product) {
+                // Update product details
+                document.getElementById('product-details').innerHTML = `
+                    <h2>${product.name}</h2>
+                    <p><strong>Price:</strong> ${product.price}</p>
+                    <p>${product.description}</p>
+                    <button class="btn btn-primary" id="add-to-cart">Add to Cart</button>
+                `;
+
+                // Update product slider
+                const carouselInner = document.querySelector('.carousel-inner');
+                carouselInner.innerHTML = product.images.map((img, index) => `
+                    <div class="carousel-item${index === 0 ? ' active' : ''}">
+                        <img src="${img}" class="d-block w-100" alt="Product Image">
+                    </div>
+                `).join('');
+
+                // Update related products
+                const relatedProductsList = document.getElementById('related-products-list');
+                relatedProductsList.innerHTML = product.relatedProducts.map(relatedProduct => `
+                    <div class="col-md-3">
+                        <div class="card product-card">
+                            <img src="${relatedProduct.image}" class="card-img-top" alt="${relatedProduct.name}">
+                            <div class="card-body">
+                                <h5 class="card-title">${relatedProduct.name}</h5>
+                                <a href="product_detail.html?id=${relatedProduct.id}" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Add to Cart functionality
+                document.getElementById('add-to-cart').addEventListener('click', function() {
+                    // Assuming `cart` is an array stored in localStorage
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    let cartItem = cart.find(item => item.id === productId);
+
+                    if (cartItem) {
+                        cartItem.quantity++;
+                    } else {
+                        cart.push({
+                            id: productId,
+                            name: product.name,
+                            price: product.price,
+                            image: product.images[0], // Use the first image as a representative image
+                            quantity: 1
+                        });
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert('Product added to cart!');
+                    updateCartCount();
+                });
+            }
+        }
+
+        function updateCartCount() {
+    const cartCount = JSON.parse(localStorage.getItem('cart'))?.length || 0;
+    document.getElementById('cart-count').textContent = cartCount;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateCartCount();
+});
+
+        loadProductDetails();
+        updateCartCount();
+    });
+</script>
+</body>
+
+</html>

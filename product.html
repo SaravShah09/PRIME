@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>E-Commerce</title>
+    <style>
+ body {
+    font-family: 'Arial', sans-serif;
+}
+
+.header_menu {
+    background-color: #343a40; /* Darker navbar color */
+}
+
+.header_menu .navbar-brand img {
+    max-width: 120px;
+    height: auto;
+}
+
+.header_menu .nav-link {
+    color: #040404 !important; /* White text for navbar links */
+}
+
+.header_menu .nav-link:hover {
+    color: #cc4545!important; /* Light color on hover */
+}
+
+
+.header_menu .search .btn {
+    border-radius: 50px; /* Rounded corners */
+    background-color: #825aef; /* Primary color */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove border */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    padding: 8px 20px; /* Padding inside the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.header_menu .search .btn:hover {
+    background-color: #0056b3; /* Darker primary color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+.product-card {
+    max-width: 500px; /* Adjust max-width as needed */
+    width: 1500%;
+    margin: 20px auto;
+    background-color: #fbc7fb;
+    border: 1px solid #090909;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 320px; /* Set a fixed height */
+}
+
+.product-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: contain; /* Use 'cover' to ensure the image covers the area */
+    border-bottom: 1px solid #fcfcfc;
+    background-color: #ffffff;
+    
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.card-footer {
+    text-align: center;
+    margin-top: auto;
+}
+
+      
+        .pagination-controls {
+    /* Adds space above pagination controls */
+    margin-bottom: 700px; /* Adds space below pagination controls */
+    text-align: center;
+}
+
+.pagination-controls button {
+    margin: 0.5px;
+    border-radius: 50%;
+}
+
+.pagination-controls button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Footer section styling */
+.footer_section {
+    background-color: #39434e; /* Light background color for the footer */
+}
+
+.footer_section .footer_title h3 {
+    color: #92ff04; /* Dark color for section titles */
+}
+
+.footer_section .footer_links ul li a {
+    color: #0288f5; /* Slightly lighter color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer_section .footer_links ul li a:hover {
+    color: #dc00f9; /* Change color on hover */
+}
+
+.footer_section .copy {
+    color: #abb7ed; /* Default text color for footer */
+    font-size: medium;
+}
+.footer_section .info{
+    color: aliceblue;
+}
+
+    </style>
+</head>
+
+<body id="top">
+    <!-- ==============header menu section starts here============== -->
+    <section class="header_menu" id="header_menu">
+        <div class="container-fluid px-0 shadow">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <a class="navbar-brand pl-5 pl-small-0" href="index.html">
+                    <img src="assets/images/logo.png" class="img img-fluid" width="120px" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        
+                    </ul>
+                    <div class="search mr-3">
+                        <a href="search.html" class="btn btn-sm btn-outline-primary">
+                            Search
+                        </a>
+                    </div>
+                    <!-- Cart Icon in the header -->
+                    <div class="cart">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart fa-2x"></i>
+                            <span class="badge badge-pill badge-primary" id="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- ==============header menu section ends here============== -->
+
+    <!-- ==============product starts here============== -->
+    <section class="products py-5 my-5" id="products">
+        <div class="container">
+            <div class="section_title text-center mb-5">
+                <h1 class="text-capitalize">Products</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-3 border-right mb-small-5">
+                    <h4 class="mb-5 border-bottom">Filters</h4>
+                    <div class="mb-5">
+                        <label><b>Category</b></label>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#" data-category="Men Wear" class="filter-category">Men Wear</a></li>
+                            <li class="list-group-item"><a href="#" data-category="Women Wear" class="filter-category">Women Wear</a></li>
+                            <li class="list-group-item"><a href="#" data-category="Other Accessories" class="filter-category">Other Accessories</a></li>
+                            <li class="list-group-item"><a href="#" data-category="Men Fashion" class="filter-category">Men Fashion</a></li>
+                            <li class="list-group-item"><a href="#" data-category="Women Fashion" class="filter-category">Women Fashion</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mb-6">
+                    <div class="col" id="product-list">
+                        <!-- Products will be dynamically injected here by JavaScript -->
+                    </div>
+                    <div id="pagination-controls" class="pagination-controls">
+                        <!-- Pagination controls will be dynamically injected here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==============product ends here============== -->
+
+    <!-- ==============footer starts here============== -->
+    <section class="footer_section pt-5 pb-2" id="footer_section">
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 col-6 pl-5 pl-small-15">
+                        <div class="footer_title">
+                            <a href="index.html"><img src="assets/images/logo.png" width="150px" class="img img-fluid"
+                                    alt="logo"></a>
+                        </div>
+                        <div class="info">
+                            We offer high-quality products and excellent customer service. Our goal is to make shopping easy and enjoyable. Thank you for choosing us!
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="footer_title pt-3 mb-3">
+                            <h3>Quick Links</h3>
+                        </div>
+                        <div class="footer_links">
+                            <ul>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="javascript:;">Offers & Discounts</a></li>
+                                <li><a href="javascript:;">Get Coupon</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="footer_title pt-3 mb-3">
+                            <h3>New Products</h3>
+                        </div>
+                        <div class="footer_links">
+                            <ul>
+                                <li><a href="javascript:;">Woman Cloth</a></li>
+                                <li><a href="javascript:;">Fashion Accessories</a></li>
+                                <li><a href="javascript:;">Man Accessories</a></li>
+                                <li><a href="javascript:;">Rubber made Toys</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="footer_title pt-3 mb-3">
+                            <h3>Support</h3>
+                        </div>
+                        <div class="footer_links">
+                            <ul>
+                                <li><a href="javascript:;">Frequently Asked Questions</a></li>
+                                <li><a href="javascript:;">Terms & Conditions</a></li>
+                                <li><a href="javascript:;">Privacy Policy</a></li>
+                                <li><a href="javascript:;">Report a Payment Issue</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy" border-top>
+                <h6 class="text-center mt-3">Copyright ©2024 All rights reserved
+                </h6>
+            </div>
+        </footer>
+    </section>
+    <div class="backtop">
+        <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+            <i class="fas fa-chevron-up text-dark"></i>
+        </a>
+    </div>
+    <!-- ==============footer ends here============== -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Dummy product data
+            const products = [
+                { id: 1, name: 'Men Casual Hoodie', price: 400, image: 'assets/images/product1.png', category: 'Men Wear' },
+                { id: 2, name: 'Party Dress for Women', price: 550, image: 'assets/images/product2.png', category: 'Women Wear' },
+                { id: 3, name: 'Office Wear Shirt for Men', price: 800, image: 'assets/images/product3.png', category: 'Men Wear' },
+                { id: 4, name: 'Stylish Goggles for Men', price: 200, image: 'assets/images/product4.png', category: 'Men Fashion' },
+                { id: 5, name: 'Sony Camera', price: 200000, image: 'assets/images/product5.png', category: 'Other Accessories' },
+                { id: 6, name: 'MakeUp for Women', price: 1400, image: 'assets/images/product6.png', category: 'Women Fashion' },
+                { id: 7, name: 'Cotton Plazzo for Women', price: 400, image: 'assets/images/product7.png', category: 'Women Wear' },
+                { id: 8, name: 'Stylish Locket for Men', price: 550, image: 'assets/images/product8.png', category: 'Men Fashion' },
+                { id: 9, name: 'Stylish Hair Buckle for Women', price: 99, image: 'assets/images/product9.png', category: 'Women Fashion' },
+                { id: 10, name: 'laptop Sleeve', price: 300, image: 'assets/images/product10.png', category: 'Other Accessories' },
+                { id: 11, name: 'Jacket for Men', price: 2000, image: 'assets/images/product11.png', category: 'Men Wear' },
+                { id: 12, name: 'Top for Women', price: 499, image: 'assets/images/product12.png', category: 'Women Wear' },
+                { id: 13, name: 'Stylish bracelet for Men', price: 500, image: 'assets/images/product13.png', category: 'Men Fashion' },
+                { id: 14, name: 'Necklace Set for Women', price: 999, image: 'assets/images/product14.png', category: 'Women Fashion' },
+                { id: 15, name: 'C-type Cable', price: 149, image: 'assets/images/product15.png', category: 'Other Accessories' },
+                { id: 16, name: 'Casual Jeans for Men', price: 3500, image: 'assets/images/product16.png', category: 'Men Wear' },
+                { id: 17, name: 'partyWear Dress for Women', price: 2000, image: 'assets/images/product17.png', category: 'Women Wear' },
+                { id: 18, name: 'Shoes for Men', price: 4000, image: 'assets/images/product18.png', category: 'Men Fashion' },
+                { id: 19, name: 'Slippers for Women', price: 200, image: 'assets/images/product19.png', category: 'Women Fashion' },
+                { id: 20, name: 'Boat Sound Bar', price: 7000, image: 'assets/images/product20.png', category: 'Other Accessories' },
+            ];
+
+        const productsPerPage = 20;
+        let currentPage = 1;
+
+        function displayProducts(category, page) {
+        const productList = document.getElementById('product-list');
+        productList.innerHTML = ''; // Clear existing products
+
+        // Filter products based on category
+        const filteredProducts = category ? products.filter(product => product.category === category) : products;
+        const totalProducts = filteredProducts.length;
+
+        // Pagination logic
+        const start = (page - 1) * productsPerPage;
+        const end = start + productsPerPage;
+        const paginatedProducts = filteredProducts.slice(start, end);
+
+        if (paginatedProducts.length === 0) {
+            productList.innerHTML = '<p>No products found in this category.</p>';
+            return;
+        }
+
+        // Generate HTML for each product without "Add to Cart" button
+        paginatedProducts.forEach(product => {
+            const productHTML = `
+                <div class="col-md-4 mb-4">
+                    <div class="card product-card">
+                        <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text">Price: ₹${product.price}</p>
+                            <a href="product_detail.html?id=${product.id}" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            productList.insertAdjacentHTML('beforeend', productHTML);
+        });
+    }
+
+    function updateCartCount() {
+        const cartCount = document.getElementById('cart-count');
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        cartCount.textContent = cartItems.length;
+    }
+
+    // Get category from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category') || '';
+
+    // Display products based on category
+    displayProducts(category, currentPage);
+
+    // Handle category filter clicks
+    document.querySelectorAll('.filter-category').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const selectedCategory = this.dataset.category;
+            window.location.search = `?category=${encodeURIComponent(selectedCategory)}`;
+        });
+    });
+
+    // Initialize cart count
+    updateCartCount();
+});
+
+    </script>
+</body>
+
+</html>
